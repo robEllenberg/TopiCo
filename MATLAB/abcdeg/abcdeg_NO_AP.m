@@ -39,7 +39,7 @@
 
 function [t] = abcdeg_NO_AP(P_init,V_init,A_init,P_wayp,~,A_wayp,V_max,~,~,A_min,J_max,J_min) %#codegen
 % Generated on 04-Sep-2019 17:17:26
-coder.inline('default');
+%coder.inline('default');
 
 t7 = [0.0;(A_wayp.*2.0)./J_max];
 

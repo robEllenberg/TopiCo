@@ -39,7 +39,7 @@
 
 function [t] = abcdeg_TA_AVP(~,~,~,~,~,~,~,~,~,~,~,~,~) %#codegen
 % Generated on 28-Aug-2019 13:55:05
-coder.inline('default');
+%coder.inline('default');
 
 t1 = 0.0;
 

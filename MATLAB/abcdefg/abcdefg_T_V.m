@@ -39,7 +39,7 @@
 
 function [t] = abcdefg_T_V(~,V_init,A_init,~,V_wayp,~,V_max,V_min,A_max,A_min,J_max,J_min,T) %#codegen
 % Generated on 02-Sep-2019 15:54:56
-coder.inline('default');
+%coder.inline('default');
 
 l2 = 1.0./J_max;
 l3 = -V_min;

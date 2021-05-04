@@ -39,7 +39,7 @@
 
 function [t] = abcdef_O_VP(P_init,V_init,A_init,P_wayp,V_wayp,~,V_max,~,A_max,A_min,J_max,J_min) %#codegen
 % Generated on 04-Sep-2019 13:54:44
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_max.^2;
 t2 = (-l2-J_max.*V_init.*2.0+J_max.*V_max.*2.0+A_init.^2+(J_max.*l2)./J_min)./(A_max.*J_max.*2.0);

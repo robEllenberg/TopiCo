@@ -39,7 +39,7 @@
 
 function [t] = aceg_T_A(~,V_init,A_init,~,~,A_wayp,V_max,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 03-Sep-2019 12:37:25
-coder.inline('default');
+%coder.inline('default');
 
 l2 = J_min.*T;
 l3 = J_max.*T;

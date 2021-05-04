@@ -39,7 +39,7 @@
 
 function [t] = abcefg_T_V(~,V_init,A_init,~,V_wayp,~,~,V_min,A_max,A_min,J_max,J_min,T) %#codegen
 % Generated on 02-Sep-2019 15:45:15
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = A_min.^2;

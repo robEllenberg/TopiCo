@@ -39,7 +39,7 @@
 
 function [t] = abcdeg_O_VP(P_init,V_init,A_init,P_wayp,V_wayp,~,V_max,V_min,A_max,~,J_max,J_min) %#codegen
 % Generated on 04-Sep-2019 13:52:28
-coder.inline('default');
+%coder.inline('default');
 
 l2 = -J_min;
 l3 = -V_min;

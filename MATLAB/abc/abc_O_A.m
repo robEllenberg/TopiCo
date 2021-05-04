@@ -39,7 +39,7 @@
 
 function [t] = abc_O_A(~,V_init,A_init,~,~,A_wayp,~,V_min,A_max,~,J_max,J_min) %#codegen
 % Generated on 28-Aug-2019 17:25:45
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_max.^2;
 l3 = A_wayp.^2;

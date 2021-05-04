@@ -39,7 +39,7 @@
 
 function [t] = acefg_T_AV(~,V_init,A_init,~,V_wayp,A_wayp,~,~,~,A_min,J_max,J_min,T) %#codegen
 % Generated on 03-Sep-2019 11:28:47
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = A_wayp.^2;

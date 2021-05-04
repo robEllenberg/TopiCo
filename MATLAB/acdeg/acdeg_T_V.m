@@ -39,7 +39,7 @@
 
 function [t] = acdeg_T_V(~,V_init,A_init,~,V_wayp,~,V_max,V_min,~,~,J_max,J_min,T) %#codegen
 % Generated on 02-Sep-2019 16:42:37
-coder.inline('default');
+%coder.inline('default');
 
 l2 = J_min.^2;
 l3 = J_min.^3;

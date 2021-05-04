@@ -39,7 +39,7 @@
 
 function [t] = a_O_P(P_init,V_init,A_init,P_wayp,~,~,~,~,~,~,J_max,~) %#codegen
 % Generated on 28-Aug-2019 17:25:45
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = A_init.^3;

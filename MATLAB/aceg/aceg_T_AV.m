@@ -39,7 +39,7 @@
 
 function [t] = aceg_T_AV(~,V_init,A_init,~,V_wayp,A_wayp,~,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 03-Sep-2019 11:12:37
-coder.inline('default');
+%coder.inline('default');
 
 l2 = J_max.*T;
 l3 = -A_wayp;

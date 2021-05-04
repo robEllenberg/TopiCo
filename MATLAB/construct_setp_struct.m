@@ -58,8 +58,8 @@ function [J_setp_struct] = construct_setp_struct(t_in2,J_in2) %#codegen
     s.time = 0;
     s.signals.values = 0;
     J_setp_struct = repmat(s,1,num_axes);
-    coder.varsize('J_setp_struct(:).time',[],[true, true]);
-    coder.varsize('J_setp_struct(:).signals.values',[],[true, true]);
+    %coder.varsize('J_setp_struct(:).time',[],[true, true]);
+    %coder.varsize('J_setp_struct(:).signals.values',[],[true, true]);
 
     for index_axis = 1:num_axes
 

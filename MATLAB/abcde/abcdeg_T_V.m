@@ -39,7 +39,7 @@
 
 function [t] = abcdeg_T_V(~,V_init,A_init,~,V_wayp,~,V_max,V_min,A_max,~,J_max,J_min,T) %#codegen
 % Generated on 02-Sep-2019 16:48:04
-coder.inline('default');
+%coder.inline('default');
 
 l2 = -J_min;
 l3 = -V_min;

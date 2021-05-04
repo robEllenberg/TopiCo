@@ -39,7 +39,7 @@
 
 function [t] = abcefg_O_AVP(P_init,V_init,A_init,P_wayp,V_wayp,A_wayp,~,~,A_max,A_min,J_max,J_min) %#codegen
 % Generated on 28-Aug-2019 12:13:20
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = A_init.^3;

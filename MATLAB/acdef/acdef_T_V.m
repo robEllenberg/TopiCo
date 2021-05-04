@@ -39,7 +39,7 @@
 
 function [t] = acdef_T_V(~,V_init,A_init,~,V_wayp,~,V_max,~,~,A_min,J_max,J_min,T) %#codegen
 % Generated on 02-Sep-2019 16:00:04
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = J_max.^2;

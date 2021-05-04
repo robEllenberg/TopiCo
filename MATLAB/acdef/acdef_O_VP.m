@@ -39,7 +39,7 @@
 
 function [t] = acdef_O_VP(P_init,V_init,A_init,P_wayp,V_wayp,~,V_max,~,~,A_min,J_max,J_min) %#codegen
 % Generated on 28-Aug-2019 13:49:07
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = J_min.^2;

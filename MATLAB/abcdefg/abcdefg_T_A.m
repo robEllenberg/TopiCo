@@ -39,7 +39,7 @@
 
 function [t] = abcdefg_T_A(~,V_init,A_init,~,~,A_wayp,V_max,~,A_max,A_min,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 15:34:00
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_min.^2;
 l3 = A_wayp.^2;

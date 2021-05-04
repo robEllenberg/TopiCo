@@ -39,7 +39,7 @@
 
 function [t] = ac_T_A(~,~,A_init,~,~,A_wayp,~,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 15:08:31
-coder.inline('default');
+%coder.inline('default');
 
 t1 = (A_init-A_wayp+J_min.*T)./(J_min-J_max);
 

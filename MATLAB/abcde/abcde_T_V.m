@@ -39,7 +39,7 @@
 
 function [t] = abcde_T_V(~,V_init,A_init,~,V_wayp,~,V_max,~,A_max,~,J_max,J_min,T) %#codegen
 % Generated on 03-Sep-2019 12:09:59
-coder.inline('default');
+%coder.inline('default');
 
 l2 = -V_max;
 l3 = sqrt(2.0);

@@ -39,7 +39,7 @@
 
 function [t] = acdeg_NO_VP(~,~,~,~,~,~,~,~,~,~,~,~) %#codegen
 % Generated on 28-Aug-2019 13:51:13
-coder.inline('default');
+%coder.inline('default');
 
 t1 = 0.0;
 

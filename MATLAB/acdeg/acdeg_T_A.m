@@ -39,7 +39,7 @@
 
 function [t] = acdeg_T_A(~,V_init,A_init,~,~,A_wayp,V_max,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 16:29:55
-coder.inline('default');
+%coder.inline('default');
 
 t7 = [0.0;(A_wayp.*2.0)./J_max];
 

@@ -39,7 +39,7 @@
 
 function [t] = acdeg_T_AP(P_init,V_init,A_init,P_wayp,~,A_wayp,V_max,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 11:55:45
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = A_init.^3;

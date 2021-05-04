@@ -39,7 +39,7 @@
 
 function [t] = a_O_V(~,V_init,A_init,~,V_wayp,~,~,~,~,~,J_max,~) %#codegen
 % Generated on 28-Aug-2019 17:25:45
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_init.^2;
 l3 = J_max.*V_init.*2.0;

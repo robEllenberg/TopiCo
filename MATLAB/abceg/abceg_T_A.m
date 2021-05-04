@@ -39,7 +39,7 @@
 
 function [t] = abceg_T_A(~,V_init,A_init,~,~,A_wayp,V_max,~,A_max,~,J_max,J_min,T) %#codegen
 % Generated on 03-Sep-2019 13:20:22
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_wayp.^2;
 t3 = sqrt((J_min-J_max).*(J_min.*l2-J_max.*l2-A_init.^2.*J_min+A_init.*A_max.*J_min.*2.0-A_max.*A_wayp.*J_min.*2.0+J_min.*J_max.*V_init.*2.0-J_min.*J_max.*V_max.*2.0+A_max.*J_min.*J_max.*T.*2.0))./(J_min.^2-J_min.*J_max);

@@ -39,7 +39,7 @@
 
 function [t] = abcef_T_V(~,V_init,A_init,~,V_wayp,~,~,~,A_max,A_min,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 16:37:18
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_max.^2;
 l3 = -A_max;

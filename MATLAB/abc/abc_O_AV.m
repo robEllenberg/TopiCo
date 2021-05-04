@@ -39,7 +39,7 @@
 
 function [t] = abc_O_AV(~,V_init,A_init,~,V_wayp,A_wayp,~,~,A_max,~,J_max,J_min) %#codegen
 % Generated on 28-Aug-2019 17:25:45
-coder.inline('default');
+%coder.inline('default');
 
 l2 = A_max.^2;
 t2 = ((J_min.*l2-J_max.*l2-A_init.^2.*J_min+A_wayp.^2.*J_max+J_min.*J_max.*V_init.*2.0-J_min.*J_max.*V_wayp.*2.0).*(-1.0./2.0))./(A_max.*J_min.*J_max);

@@ -39,7 +39,7 @@
 
 function [t] = ac_T_P(P_init,V_init,A_init,P_wayp,~,~,~,~,~,~,J_max,J_min,T) %#codegen
 % Generated on 29-Aug-2019 14:04:13
-coder.inline('default');
+%coder.inline('default');
 
 l2 = P_init.*6.0;
 l3 = P_wayp.*6.0;
