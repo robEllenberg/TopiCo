@@ -41,7 +41,7 @@ show_trajectory_1D_defaults;
 if (~exist('h_figure1D','var') || ~isvalid(h_figure1D))
     h_figure1D = figure('Color','w','Units','pixels','Resize','off');
     for i = 1:1:10 %MATLAB Bug
-        h_figure1D.Position = resolution;
+        %h_figure1D.Position = resolution;
         drawnow;
     end
 else
@@ -59,8 +59,8 @@ end
 h_stairs      = zeros(num_axes,4);
 h_marker      = zeros(num_axes,4,max(num_times));
 h_start       = zeros(num_axes,3);
-h_waypoints_1 = gobjects(num_axes,3,num_waypoints);
-h_waypoints_2 = gobjects(num_axes,3,num_waypoints);
+%%h_waypoints_1 = gobjects(num_axes,3,num_waypoints);
+%%h_waypoints_2 = gobjects(num_axes,3,num_waypoints);
 h_limits_1    = zeros(num_axes,3,num_waypoints);
 h_limits_2    = zeros(num_axes,3,num_waypoints);
 
@@ -108,9 +108,9 @@ end
                 T_old = sum(T_waypoints(index_axis,1:index_waypoint-1));
                 T = sum(T_waypoints(index_axis,1:index_waypoint));
                 line([T_old T],[0 0],'Color','black','LineStyle',':','Linewidth',size_segment);
-                h_waypoints_1(index_axis,1,index_waypoint) = scatter(0,Waypoints(index_axis,1,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
+                %h_waypoints_1(index_axis,1,index_waypoint) = scatter(0,Waypoints(index_axis,1,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
                 Waypoint_evolved = evolve_waypoints(Waypoints(:,:,index_waypoint),T);
-                h_waypoints_2(index_axis,1,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,1),size_point,color,'Marker','o','MarkerFaceColor',color);
+                %h_waypoints_2(index_axis,1,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,1),size_point,color,'Marker','o','MarkerFaceColor',color);
                 if (b_plot_path == true)
                     xt = @(t) Waypoints(index_axis,1,index_waypoint)+Waypoints(index_axis,4,index_waypoint).*t+1/2.*Waypoints(index_axis,5,index_waypoint).*t.^2;
                     fplot(xt,[0 T],'Color',color,'LineStyle',':','Linewidth',size_path);
@@ -166,9 +166,9 @@ end
                 patch([T_old,T_old,T,T],[V_max(index_axis,index_waypoint),max(axislimits_1D(2,4),V_max(index_axis,index_waypoint)),max(axislimits_1D(2,4),V_max(index_axis,index_waypoint)),V_max(index_axis,index_waypoint)],color_limit,'EdgeAlpha',0,'FaceAlpha',alpha_limit);
                 patch([T_old,T_old,T,T],[V_min(index_axis,index_waypoint),min(axislimits_1D(2,3),V_min(index_axis,index_waypoint)),min(axislimits_1D(2,3),V_min(index_axis,index_waypoint)),V_min(index_axis,index_waypoint)],color_limit,'EdgeAlpha',0,'FaceAlpha',alpha_limit);
                 line([T_old T],[0 0],'Color','black','LineStyle',':','Linewidth',size_segment);
-                h_waypoints_1(index_axis,2,index_waypoint) = scatter(0,Waypoints(index_axis,2,index_waypoint)+Waypoints(index_axis,4,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
+                %h_waypoints_1(index_axis,2,index_waypoint) = scatter(0,Waypoints(index_axis,2,index_waypoint)+Waypoints(index_axis,4,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
                 Waypoint_evolved = evolve_waypoints(Waypoints(:,:,index_waypoint),T);
-                h_waypoints_2(index_axis,2,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,2),size_point,color,'Marker','o','MarkerFaceColor',color);
+                %h_waypoints_2(index_axis,2,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,2),size_point,color,'Marker','o','MarkerFaceColor',color);
             end
             for index_times = 2:1:num_times(index_axis)
                 t_marker = J_setp_struct(index_axis).time(index_times) - ts_rollout;
@@ -216,9 +216,9 @@ end
                 patch([T_old, T_old, T, T],[A_max(index_axis,index_waypoint),max(axislimits_1D(3,4),A_max(index_axis,index_waypoint)),max(axislimits_1D(3,4),A_max(index_axis,index_waypoint)),A_max(index_axis,index_waypoint)],color_limit,'EdgeAlpha',0,'FaceAlpha',alpha_limit);
                 patch([T_old, T_old, T, T],[A_min(index_axis,index_waypoint),min(axislimits_1D(3,3),A_min(index_axis,index_waypoint)),min(axislimits_1D(3,3),A_min(index_axis,index_waypoint)),A_min(index_axis,index_waypoint)],color_limit,'EdgeAlpha',0,'FaceAlpha',alpha_limit);
                 line([T_old T],[0 0],'Color','black','LineStyle',':','Linewidth',size_segment);
-                h_waypoints_1(index_axis,3,index_waypoint) = scatter(0,Waypoints(index_axis,3,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
+                %h_waypoints_1(index_axis,3,index_waypoint) = scatter(0,Waypoints(index_axis,3,index_waypoint),size_point,color,'Marker','o','MarkerFaceColor',color,'MarkerFaceAlpha',0.0);
                 Waypoint_evolved = evolve_waypoints(Waypoints(:,:,index_waypoint),T);
-                h_waypoints_2(index_axis,3,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,3),size_point,color,'Marker','o','MarkerFaceColor',color);
+                %h_waypoints_2(index_axis,3,index_waypoint) = scatter(T,Waypoint_evolved(index_axis,3),size_point,color,'Marker','o','MarkerFaceColor',color);
             end
             for index_times = 2:1:num_times(index_axis)
                 t_marker = J_setp_struct(index_axis).time(index_times) - ts_rollout;
@@ -287,33 +287,33 @@ end
 for index_subplot = 1:4
     handle = h_axis1D(index_subplot);
     
-    handle.YTick = axislimits_1D(index_subplot,3):(axislimits_1D(index_subplot,4)-axislimits_1D(index_subplot,3))/4:axislimits_1D(index_subplot,4);
-    xtickformat(handle,tickformat{1});
-    ytickformat(handle,tickformat{2});
+    %handle.YTick = axislimits_1D(index_subplot,3):(axislimits_1D(index_subplot,4)-axislimits_1D(index_subplot,3))/4:axislimits_1D(index_subplot,4);
+    %xtickformat(handle,tickformat{1});
+    %ytickformat(handle,tickformat{2});
     box(handle,'on');
     
     if (index_subplot ~= 4)
-        handle.XTickLabel = [];
+        %handle.XTickLabel = [];
     end
-    handle.FontSize = size_font;
+    %handle.FontSize = size_font;
     
     axis(handle,axislimits_1D(index_subplot,:));
 
     for index_axis = num_axes:-1:1
         if (size(b_plot_axis,1) >= index_axis && b_plot_axis(index_axis) == true)
-            uistack(h_stairs(index_axis,index_subplot),'top');
+            %uistack(h_stairs(index_axis,index_subplot),'top');
             if (b_plot_markers(index_subplot) == true)
                 for index_times = 2:1:size(J_setp_struct(index_axis).time,1)
-                    uistack(h_marker(index_axis,index_subplot,index_times),'top');
+                    %uistack(h_marker(index_axis,index_subplot,index_times),'top');
                 end
             end
             if (index_subplot ~= 4)  
-                uistack(h_start(index_axis,index_subplot),'top');
+                %uistack(h_start(index_axis,index_subplot),'top');
                 for index_waypoint = 1:num_waypoints
-                    uistack(h_waypoints_1(index_axis,index_subplot,index_waypoint),'top');
-                    uistack(h_waypoints_2(index_axis,index_subplot,index_waypoint),'top');
+                    %uistack(h_waypoints_1(index_axis,index_subplot,index_waypoint),'top');
+                    %uistack(h_waypoints_2(index_axis,index_subplot,index_waypoint),'top');
                     
-                    h_waypoints_1(index_axis,index_subplot,index_waypoint).MarkerEdgeColor = 'none';
+                    %h_waypoints_1(index_axis,index_subplot,index_waypoint).MarkerEdgeColor = 'none';
                 end
             end
         end
@@ -322,12 +322,12 @@ end
 
 inset = [0,0,0.01,0]; %leave a little margin for points
 for index_subplot = 1:4
-    test   = h_axis1D(index_subplot).TightInset;
-    inset  = [max(test(1),inset(1)),max(test(2),inset(2)),max(test(3),inset(3)),min(test(4),inset(4))];
+    %test   = h_axis1D(index_subplot).TightInset;
+    %inset  = [max(test(1),inset(1)),max(test(2),inset(2)),max(test(3),inset(3)),min(test(4),inset(4))];
 end
 for index_subplot = 1:4
-    pos    = h_axis1D(index_subplot).Position;
-    h_axis1D(index_subplot).Position = [inset(1),pos(2), 1-inset(1)-inset(3), pos(4)];
+    %pos    = h_axis1D(index_subplot).Position;
+    %h_axis1D(index_subplot).Position = [inset(1),pos(2), 1-inset(1)-inset(3), pos(4)];
 end
 
 
